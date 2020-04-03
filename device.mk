@@ -213,7 +213,11 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
+    android.hardware.power@1.2-service \
+    android.hardware.power@1.2-impl \
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.2 \
+    vendor.xperience.power@1.0
 
 # QCOM
 PRODUCT_COPY_FILES += \
