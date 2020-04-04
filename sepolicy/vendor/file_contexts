@@ -1,0 +1,5 @@
+#Allow Fingerprint execution for M1852
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.m1852        u:object_r:hal_fingerprint_default_exec:s0
+
+# Sensors perms
+/persist/sensors/            u:object_r:mnt_vendor_file:s0
