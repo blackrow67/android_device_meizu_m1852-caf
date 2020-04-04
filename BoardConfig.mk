@@ -157,6 +157,10 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     firmware \
     persist
 
+# Root Symlinks
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /mnt/vendor/persist:/persist
+
 # RenderScript
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
