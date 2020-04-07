@@ -57,6 +57,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=8m \
     dalvik.vm.heaptargetutilization=0.75 \
 
+#Debug ims
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.ims_volte_enable=1 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.radio.data_ltd_sys_ind=1 \
+    persist.radio.data_con_rprt=1 \
+    persist.radio.calls.on.ims=1 \
+    persist.data.iwlan.enable=true \
+    persist.radio.videopause.mode=1
+
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-meizu
 
@@ -133,8 +145,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.fourgOff=1 \
     persist.radio.multisim.config=dsds \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.ignore_dom_time=15 \
     persist.vendor.radio.rat_on=combine \
+    persist.vendor.radio.snapshot_enabled=1 \
+    persist.vendor.radio.snapshot_timer=5 \
     persist.vendor.radio.sib16_support=1 \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     ro.cdma.cfall.disable=*730 \
@@ -148,6 +165,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cdma.cfu.enable=*72 \
     ro.cdma.cw.disable=*740 \
     ro.cdma.cw.enable=*74 \
+    vendor.rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so \
+    persist.vendor.radio.procedure_bytes=SKIP
 
 # Thermal
 PRODUCT_PROPERTY_OVERRIDES += \

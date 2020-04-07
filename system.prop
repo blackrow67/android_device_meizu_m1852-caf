@@ -17,6 +17,10 @@ ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 # Set network mode to (T/L/G/W/1X/EVDO, T/G/W/L) for 7+5 mode device on DSDS mode
 ro.telephony.default_network=22,20
+persist.radio.aosp_usr_pref_sel=true
+persist.radio.sib16_support=1
+persist.radio.schd.cache=3500
+persist.sys.fflag.override.settings_network_and_internet_v2=true
 
 debug.sf.hw=0
 debug.egl.hw=0
@@ -205,3 +209,25 @@ ro.diag.enc_wechat_key=1
 #Huaqin add for 819778 by chenqiang at 20180831 start
 vendor.audio.adm.buffering.ms=3
 #Huaqin add for 819778 by chenqiang at 20180831 end
+
+#ims
+pers-ist.radio.VT_HYBRID_ENABLE=1
+persist.rcs.supported=0
+
+#set RIJL video call related prop
+persist.radio.NO_STAPA=1
+
+# Report redirection call number
+persist.vendor.radio.redir_party_num=1
+
+#Enable manual network selection function and distinguish 2G/3G/4G
+persist.vendor.radio.rat_on=combine
+
+#for special cdma card sms issue
+persist.vendor.radio.force_on_dc=true
+
+# system property determining camera HAL to be used for a Video call
+#
+# 1 is camera1
+# 2 or anything else is camera2
+persist.radio.VT_CAM_INTERFACE=1
