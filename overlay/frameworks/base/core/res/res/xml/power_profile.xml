@@ -64,15 +64,28 @@
         <value>1300</value>
         <value>1400</value>
     </array>
-    <item name="cpu.awake">10</item>
-    <item name="cpu.idle">5</item>
+    <!-- Additional power consumption by CPU cluster0 itself when running
+         excluding cores in it -->
+    <item name="cpu.cluster_power.cluster0">1.30</item>
+    <!-- Additional power consumption by CPU cluster1 itself when running
+         excluding cores in it -->
+    <item name="cpu.cluster_power.cluster1">5.29</item>
+<!--    <item name="cpu.awake">10</item>
+    <item name="cpu.idle">5</item>-->
+    <!-- Power consumption when CPU is suspended -->
+    <item name="cpu.suspend">5.25</item>
+    <!-- Additional power consumption when CPU is in a kernel idle loop -->
+    <item name="cpu.idle">5.25</item>
+    <!-- Additional power consumption by CPU excluding cluster and core when
+         running -->
+    <item name="cpu.active">21.89</item>
     <item name="battery.capacity">3210</item>
     <item name="battery.low.volt">3100</item>
     <item name="wifi.on">4.5</item>
     <item name="wifi.active">8</item>
     <item name="wifi.scan">20</item>
-    <item name="dsp.audio">10</item>
-    <item name="dsp.video">28</item>
+    <item name="audio">10</item>
+    <item name="video">28</item>
     <item name="camera.flashlight">150</item>
     <item name="camera.avg">250</item>
     <item name="gps.on">14</item>
@@ -104,4 +117,6 @@
     <item name="bluetooth.active">4.5</item>
     <item name="bluetooth.on">4.8</item>
     <item name="bluetooth.controller.voltage">3300</item>
+    <!-- Additional power used when screen is ambient mode -->
+    <item name="ambient.on">24</item>
 </device>
