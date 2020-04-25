@@ -245,6 +245,7 @@ etc/permissions/telephonyservice.xml
 framework/QtiTelephonyServicelibrary.jar
 framework/embmslibrary.jar
 framework/qcrilhook.jar
+framework/qti-telephony-common.jar
 lib/vendor.qti.hardware.data.connection@1.0.so
 lib64/vendor.qti.hardware.data.connection@1.0.so
 vendor/bin/ATFWD-daemon
