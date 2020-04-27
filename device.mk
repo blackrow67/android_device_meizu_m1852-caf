@@ -291,7 +291,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.mokee.touch@1.0-service.meizu_sdm710
+    vendor.xperience.touch@1.0-service.meizu_m1852
 
 # USB
 PRODUCT_PACKAGES += \
