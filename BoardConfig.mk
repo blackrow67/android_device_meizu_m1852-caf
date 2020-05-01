@@ -1,12 +1,13 @@
 #
 # Copyright (C) 2020 The MoKee Open Source Project
+# Copyright (C) 2020 The XPerience Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 BOARD_VENDOR := meizu
 
-COMMON_PATH := device/meizu/sdm710-common
+COMMON_PATH := device/meizu/m1852
 
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
@@ -181,4 +182,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/meizu/sdm710-common/BoardConfigVendor.mk
+-include vendor/meizu/m1852/BoardConfigVendor.mk
