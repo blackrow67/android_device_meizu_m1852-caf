@@ -120,6 +120,13 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libvulkan
 
+# Display QTI
+PRODUCT_PACKAGES += \
+    libdisplayconfig.vendor \
+    libqdMetaData \
+    vendor.display.config@1.10 \
+    vendor.display.config@1.10.vendor
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
