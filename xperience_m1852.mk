@@ -25,6 +25,9 @@ $(call inherit-product, device/meizu/m1852/device.mk)
 # Inherit some common xperience stuff.
 $(call inherit-product, vendor/xperience/config/common_full_phone.mk)
 
+# Qcom stuff
+include device/qcom/common/common.mk
+
 #Credits to XiNGRZ
 
 PRODUCT_NAME := xperience_m1852
