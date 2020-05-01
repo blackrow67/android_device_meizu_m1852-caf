@@ -10,8 +10,15 @@ $(call inherit-product, vendor/meizu/m1852/m1852-vendor.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
+
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2220
+TARGET_SCREEN_WIDTH := 1080
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -91,6 +98,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service
 
+# Charger
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/charger,root/res/images/charger)
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.1-service \
@@ -121,7 +132,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1
+    android.hardware.biometrics.fingerprint@2.1 \
+    android.hardware.biometrics.fingerprint@2.1-service.m1852
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -152,6 +164,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/init/vendor,$(TARGET_COPY_OUT_VENDOR))
 
+# Input
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
+
 # IPA
 PRODUCT_PACKAGES += \
     ipacm \
@@ -169,6 +185,10 @@ PRODUCT_COPY_FILES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.m1852
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -251,9 +271,18 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
     com.android.future.usb.accessory
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
+
 # VNDK-SP
 PRODUCT_PACKAGES += \
     vndk-sp
+
+# VNDK
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++-v27.so \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \

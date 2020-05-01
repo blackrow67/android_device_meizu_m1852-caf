@@ -5,11 +5,17 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from meizu m1852
+-include device/meizu/m1852/BoardConfig.mk
+
 BOARD_VENDOR := meizu
 
-COMMON_PATH := device/meizu/m1852
+DEVICE_PATH := device/meizu/m1852
 
-TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
+# Assertion
+TARGET_OTA_ASSERT_DEVICE := m1852,M1852
+
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
@@ -36,12 +42,14 @@ TARGET_NO_BOOTLOADER := true
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 androidboot.configfs=true androidboot.usbcontroller=a600000.dwc3 swiotlb=1
+BOARD_KERNEL_CMDLINE += g_android.luns=1 g_android.removable=1 g_android.cdrom=1
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_SEPARATED_DTBO := true
-
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_HEADER_SOURCE := kernel/meizu/sdm710
@@ -84,14 +92,14 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # GPS
 USE_DEVICE_SPECIFIC_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -118,17 +126,18 @@ TARGET_USES_INTERACTION_BOOST := true
 
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop $(COMMON_PATH)/system_meizu.prop
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop $(DEVICE_PATH)/system_meizu.prop
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/root/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/recovery.fstab
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USES_MKE2FS := true
 
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_meizu_sdm710
-TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := \
@@ -149,10 +158,10 @@ VENDOR_SECURITY_PATCH := 2019-09-01
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Timeservice
 BOARD_USES_QC_TIME_SERVICES := true

@@ -39,6 +39,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.fm.a2dp.conc.disabled=true \
     vendor.voice.path.for.pcm.voip=true \
     ro.af.client_heap_size_kbyte=7168 \
+    ro.vendor.audio.sdk.fluencetype=none \
+    vendor.audio.offload.track.enable=true \
+    vendor.audio_hal.period_size=192 \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -76,6 +79,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.meizu.voip.support=true \
     sys.meizu.m35x.white.config=false \
     sys.meizu.white.config=false \
+    ro.meizu.build.branch=M1852_QOF8_mp1 \
+    ro.meizu.build.devowner=wentai \
+    ro.meizu.carrier.model=M852Q \
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -116,6 +122,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_age=5000 \
     ro.vendor.qti.sys.fw.bservice_enable=true \
     ro.vendor.qti.sys.fw.bservice_limit=5 \
+    persist.benchmarkconfig.enable=false \
+    ro.product.perf.config=M1852_base \
+    ro.vendor.qti.sys.fw.bg_apps_limit=32 \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
