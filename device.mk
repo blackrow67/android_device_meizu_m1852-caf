@@ -248,6 +248,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.0 \
     android.hardware.secure_element@1.0 \
     ims-ext-common \
+    ims_ext_common.xml \
     libjson \
     librmnetctl \
     libxml2 \
