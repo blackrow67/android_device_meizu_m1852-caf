@@ -1,0 +1,11 @@
+[
+  {
+    "repository": "android_kernel_meizu_sdm710",
+    "target_path": "kernel/meizu/sdm710"
+  },
+  {
+    "remote": "Unicorn",
+    "repository": "android_vendor_meizu_m1852",
+    "target_path": "vendor/meizu/m1852
+  }
+]

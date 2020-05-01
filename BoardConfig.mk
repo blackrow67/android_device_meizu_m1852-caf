@@ -5,9 +5,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from meizu m1852
--include device/meizu/m1852/BoardConfig.mk
-
 BOARD_VENDOR := meizu
 
 DEVICE_PATH := device/meizu/m1852
