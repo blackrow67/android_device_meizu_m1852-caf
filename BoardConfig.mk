@@ -206,6 +206,9 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 -include vendor/meizu/m1852/BoardConfigVendor.mk
 
 #################################################################################
+# XPerience bits
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+#################################################################################
 # This is the End of BoardConfig.mk file.
 # Now, Pickup other split Board.mk files:
 #################################################################################
