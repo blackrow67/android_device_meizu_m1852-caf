@@ -15,19 +15,19 @@ INITIAL_COPYRIGHT_YEAR=2020
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
+if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-XPERIENCE_ROOT="${MY_DIR}/../../.."
+XPERIENCE_ROOT="$MY_DIR"/../../..
 
-HELPER="${XPERIENCE_ROOT}/vendor/xperience/build/tools/extract_utils.sh"
-if [ ! -f "${HELPER}" ]; then
-    echo "Unable to find helper script at ${HELPER}"
+HELPER="$XPERIENCE_ROOT"/vendor/xperience/build/tools/extract_utils.sh
+if [ ! -f "$HELPER" ]; then
+    echo "Unable to find helper script at $HELPER"
     exit 1
 fi
-source "${HELPER}"
+. "$HELPER"
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$XPERIENCE_ROOT" true
+setup_vendor "$DEVICE" "$VENDOR" "$XPERIENCE_ROOT"
 
 # Copyright headers and guards
 write_headers
