@@ -107,7 +107,10 @@ PRODUCT_PACKAGES += \
     libshim_camera \
     libashmemd_client \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service
+    android.hardware.camera.provider@2.4-service \
+    SnapdragonCamera \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.postproc@1.0
 
 # Charger
 PRODUCT_COPY_FILES += \
