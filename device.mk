@@ -92,6 +92,16 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0-impl \
     libbthost_if
 
+# Bluetooth QTI
+PRODUCT_PACKAGES += \
+    libbt-hidlclient \
+    javax.btobex \
+    libattrib_static \
+    libbt-vendor \
+    libbt-logClient \
+    bt_logger \
+    libbluetooth_qti
+
 # Camera
 PRODUCT_PACKAGES += \
     libshim_camera \
