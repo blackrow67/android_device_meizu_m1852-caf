@@ -415,25 +415,25 @@ vendor/lib64/libvpptestutils.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1_vendor.so
 
 # Perf - from polaris MIUI V11.0.4.0
-vendor/bin/hw/vendor.qti.hardware.perf@2.0-service
-vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc
-vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/perf/perfboostsconfig.xml
-vendor/etc/perf/perfconfigstore.xml
-vendor/etc/perf/targetconfig.xml
-vendor/etc/perf/targetresourceconfigs.xml
-vendor/lib64/libperfconfig.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-util.so
-vendor/lib64/vendor.qti.hardware.perf@2.0.so
-vendor/lib/libperfconfig.so
-vendor/lib/libperfgluelayer.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-perfd.so
-vendor/lib/libqti-util.so
-vendor/lib/vendor.qti.hardware.perf@2.0.so
+vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|d82b193e12e54fa74d39c4d940c52cd76c004759
+vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|0101a3294311c2988060a00f7b25d8abf2f428f9
+vendor/etc/perf/commonresourceconfigs.xml|9e277f76243eb5ad16d3e55843aadf68a54e7aaa
+vendor/etc/perf/perfboostsconfig.xml|0fd6a9951f22cfe9f0942629f9d20da433604f14
+vendor/etc/perf/perfconfigstore.xml|760248b82c4f1ad8b0e7ed1924d2b198229e118d
+vendor/etc/perf/targetconfig.xml|376ae331df9d6c30b6208f25d04ae4ea11c0e2ea
+vendor/etc/perf/targetresourceconfigs.xml|7132f1e9ce3bb21b4854b81d6e5d24409251f177
+vendor/lib64/libperfconfig.so|18e98f44adb360b31446defc434b693349dd1e86
+vendor/lib64/libperfgluelayer.so|e51addfa5ee4b757765aa23a7274bdac57bf6e40
+vendor/lib64/libqti-perfd-client.so|ab070ed07dea1e25458c36a3c53221e9aa4907aa
+vendor/lib64/libqti-perfd.so|3ed57d659d085c4c395aa897588b8e63829e9ddb
+vendor/lib64/libqti-util.so|ace0cd0de97ace0d914b2b481afc8ee2ff83a2df
+vendor/lib64/vendor.qti.hardware.perf@2.0.so|1c5c2869cb808c222dbf24aabe2c8e23518d562d
+vendor/lib/libperfconfig.so|9c4123512ab71bb34abb3b310bce18998cb373bf
+vendor/lib/libperfgluelayer.so|9fc1a68ec2b3063e0d336bb25cefc0dd0c64cc71
+vendor/lib/libqti-perfd-client.so|0d257135b88750d6b37252d61564758046499c0b
+vendor/lib/libqti-perfd.so|5ee70a516f43cacf11cdd7c727e71575f43bf8ab
+vendor/lib/libqti-util.so|5a7c58ce00c1cc8e49f7ef9fbfcadcae7afb9f97
+vendor/lib/vendor.qti.hardware.perf@2.0.so|c2c005c1b2d5fc89f539c27b49f0cb65ae51a17c
 
 # Peripheral manager
 vendor/bin/pm-proxy
