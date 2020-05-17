@@ -21,6 +21,10 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
+# RRO
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2220
 TARGET_SCREEN_WIDTH := 1080
@@ -95,6 +99,10 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0-impl \
+    audio.bluetooth.default \
+    audio.hearing_aid.default \
+    audio.a2dp.default_qti \
+    audio.hearing_aid.default_qti \
     libbthost_if
 
 # Bluetooth QTI
@@ -105,7 +113,14 @@ PRODUCT_PACKAGES += \
     libbt-vendor \
     libbt-logClient \
     bt_logger \
-    libbluetooth_qti
+    libbluetooth_qti \
+    libbt-hidlclient \
+    libbtconfigstore \
+    com.qualcomm.qti.bluetooth_audio@1.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.bluetooth_dun@1.0
 
 # Camera
 PRODUCT_PACKAGES += \
