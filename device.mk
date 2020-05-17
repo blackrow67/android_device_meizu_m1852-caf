@@ -266,6 +266,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 TARGET_COMMON_QTI_COMPONENTS := \
+    bt \
     perf
 
 # Radio - Networking stuff
