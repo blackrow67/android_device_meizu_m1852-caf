@@ -89,6 +89,11 @@ persist.fuse_sdcard=true
 #system prop for wipower support
 # ro.bluetooth.emb_wp_mode=true
 # ro.bluetooth.wipower=true
+#system prop for Bluetooth SOC type
+vendor.bluetooth.soc=cherokee
+ro.bluetooth.library_name=libbluetooth_qti.so
+persist.vendor.btstack.enable.splita2dp=true
+persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 
 #
 #snapdragon value add features
