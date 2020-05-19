@@ -357,8 +357,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK-SP
 PRODUCT_PACKAGES += \
-    vndk-sp \
-    vndk_package
+    vndk-sp
 
 # VNDK
 PRODUCT_COPY_FILES += \
