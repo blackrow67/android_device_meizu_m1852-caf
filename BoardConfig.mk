@@ -233,3 +233,6 @@ TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 #-include vendor/qcom/defs/board-defs/system/*.mk
 #-include vendor/qcom/defs/board-defs/vendor/*.mk
 #################################################################################
+
+# Todo remove this in the final bring
+BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
