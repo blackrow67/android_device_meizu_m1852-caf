@@ -1,3 +1,10 @@
+# Firmware
+/firmware                                       u:object_r:firmware_file:s0
+/bt_firmware                                    u:object_r:bt_firmware_file:s0
+
+# Persist
+/persist(/.*)?                                  u:object_r:mnt_vendor_file:s0
+
 #Allow Fingerprint execution for M1852
 #/(vendor|system/vendor)/bin/hw/vendor\.xperience\.touch@1\.0-service\.meizu_m1852
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.m1852        u:object_r:hal_fingerprint_default_exec:s0

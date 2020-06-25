@@ -8,7 +8,9 @@
 $(call inherit-product, vendor/meizu/m1852/m1852-vendor.mk)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
