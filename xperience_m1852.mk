@@ -26,7 +26,7 @@ $(call inherit-product, device/meizu/m1852/device.mk)
 $(call inherit-product, vendor/xperience/config/common_full_phone.mk)
 
 # Qcom stuff
-include device/qcom/common/common.mk
+#include device/qcom/common/common.mk
 
 #Credits to XiNGRZ
 

@@ -143,6 +143,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Power
 TARGET_TAP_TO_WAKE_NODE := /dev/vendor.xperience.touch@1.0/dt2w
 TARGET_USES_INTERACTION_BOOST := true
+TARGET_USES_NON_LEGACY_POWERHAL := true
 
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
@@ -228,6 +229,6 @@ TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 # Now, Pickup other split Board.mk files:
 #################################################################################
 # TODO: Relocate the system Board.mk files pickup into qssi lunch, once it is up.
--include vendor/qcom/defs/board-defs/system/*.mk
--include vendor/qcom/defs/board-defs/vendor/*.mk
+#-include vendor/qcom/defs/board-defs/system/*.mk
+#-include vendor/qcom/defs/board-defs/vendor/*.mk
 #################################################################################

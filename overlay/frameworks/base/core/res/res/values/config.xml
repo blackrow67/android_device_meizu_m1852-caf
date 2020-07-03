@@ -498,7 +498,7 @@
     <!-- Adjustment for software rounded corners since corners aren't perfectly round. -->
     <dimen name="rounded_corner_radius_adjustment">25px</dimen>
 
-    <!-- Height of the status bar --
+    <!-- Height of the status bar
     <dimen name="status_bar_height_portrait">110px</dimen>
     <dimen name="status_bar_height_landscape">24dp</dimen>-->
     <dimen name="status_bar_height_portrait">29.089996dip</dimen>
