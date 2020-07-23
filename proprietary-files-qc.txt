@@ -1,14 +1,13 @@
-
-# Bluetooth - from Nokia/Phoenix_00WW/PNX_sprout:10/QKQ1.190725.002/00WW_4_15B:user/release-keys
+# Bluetooth - from Nokia/Phoenix_00WW/PNX_sprout:10/QKQ1.190828.002/00WW_4_30B:user/release-keys
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|534fb85481d21ea403149d62deababe0c5e52605
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|eed5d5188e82fbb430debc61ae7e91b0b16e655e
-vendor/lib64/libbtnv.so|eba20ea0533976aa1d5ea04c68ecddc9cf63dfa0
-vendor/lib64/libbt-hidlclient.so|1321b5a8c10a6b4bbaefc763e6a2eb574f04c6a3
 vendor/lib64/hw/audio.bluetooth_qti.default.so|368f04fecf93b1eb62136b73b856d3225ea63d4c
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|8e5e3cdaf990a5bd942bc4c8a17ca11983b7b020
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|55238eec5e680449aa1497955e31945aaf45f817
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|8aa6208d215c6420dca028698eae0a5cab8e0688
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|eed5d5188e82fbb430debc61ae7e91b0b16e655e
+vendor/lib64/libbtnv.so|eba20ea0533976aa1d5ea04c68ecddc9cf63dfa0
+vendor/lib64/libbt-hidlclient.so|1321b5a8c10a6b4bbaefc763e6a2eb574f04c6a3
 vendor/lib64/libbluetooth_audio_session_qti.so|1dd80f78ff363d13ee25027e60b06e100e013b94
 vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so|fa6528bb8559bd8364e3f24ab7db8062015ff5d7
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|8c60b11ae1f03a21e7618808bfd946edb37b349f
@@ -19,6 +18,12 @@ vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|ee7bd9eafb209b06d210
 vendor/lib/libbluetooth_audio_session_qti.so|76666f41d773e848177f3952e90d45d019f5eb56
 vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so|1a1374a4a7bf64cac89520f6c4540240b1f4037b
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|5792daa7c26810bf61006c6d15cbe949bf6d4a79
+product/lib/vendor.qti.hardware.bluetooth_audio@2.0.so|235d8dc80e335a9c323f2ce395cb09b297493025
+product/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|0976fd28359b218cd041aca3fb03acde045aa760
+product/lib/vendor.qti.hardware.btconfigstore@1.0.so|b849985a2fc292120a26ba7649addd3bb6e0de1e
+product/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so|995a8127aea3b2de9efe68a5e5a6a61c80f438e7
+product/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|7cdd376b08b8571e51674e0e61607c6a52a5a24a
+product/lib64/vendor.qti.hardware.btconfigstore@1.0.so|42aa6258f3bf4e8ef72b7664f2277db49837e4da
 
 # ANT+ - from Nokia/Phoenix_00WW/PNX_sprout:10/QKQ1.190725.002/00WW_4_15B:user/release-keys
 product/lib/com.qualcomm.qti.ant@1.0.so|d62a952e299eff4b77a58508338d5ffb5665f056
