@@ -43,6 +43,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.offload.track.enable=true \
     vendor.audio_hal.period_size=192 \
 
+#timeout crash duration set to 20sec before system is ready.
+#timeout duration updates to default timeout of 5sec once the system is ready.
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.hal.boot.timeout.ms=20000
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.bluetooth.soc=cherokee \
