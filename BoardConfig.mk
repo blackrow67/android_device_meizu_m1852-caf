@@ -180,7 +180,7 @@ TARGET_RIL_VARIANT := caf
 VENDOR_SECURITY_PATCH := 2019-09-01
 
 # SELinux
--include device/qcom/sepolicy/sepolicy.mk
+-include device/qcom/sepolicy_vndr-legacy-um/sepolicy.mk
 TARGET_SEPOLICY_DIR := sdm710
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
