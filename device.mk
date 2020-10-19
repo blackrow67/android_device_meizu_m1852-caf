@@ -359,6 +359,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK-SP
 PRODUCT_PACKAGES += \
+    com.android.vndk.current.on_vendor \
     vndk-sp
 
 # Additional native libraries
