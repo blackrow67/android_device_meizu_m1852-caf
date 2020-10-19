@@ -18,8 +18,6 @@
 #define LED_OFF 0
 #define LED_BLINK 10
 
-#define MIN_BRIGHTNES 30
-
 namespace {
 using android::hardware::light::V2_0::LightState;
 
@@ -101,11 +99,7 @@ void Light::setAttentionLight(const LightState& state) {
 void Light::setPanelBacklight(const LightState& state) {
     std::lock_guard<std::mutex> lock(mLock);
     uint32_t brightness = rgbToBrightness(state);
-    uint32_t brightness_meizu;
-    if (brightness < MIN_BRIGHTNES ) {
-        brightness_meizu = MIN_BRIGHTNES;
-    }
-    set(PANEL_BRIGHTNESS_PATH, brightness_meizu);
+    set(PANEL_BRIGHTNESS_PATH, brightness);
 }
 
 void Light::setNotificationLight(const LightState& state) {
