@@ -262,10 +262,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service \
-    android.hardware.power@1.2-impl \
-    android.hardware.power@1.0-impl \
-    android.hardware.power@1.2 \
+    android.hardware.power-service \
     vendor.xperience.power@1.0
 
 # QCOM
