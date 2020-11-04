@@ -6,7 +6,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/xperience_m1852.mk
+    $(LOCAL_DIR)/conquer_m1852.mk
 
 COMMON_LUNCH_CHOICES := \
-    xperience_m1852-userdebug
+    conquer_m1852-userdebug

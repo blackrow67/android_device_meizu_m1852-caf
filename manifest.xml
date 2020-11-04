@@ -828,16 +828,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-	<!--Custom additions -->
-    <hal format="hidl">
-        <name>vendor.xperience.power</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IXPeriencePower</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <!-- System Helper HAL Service -->
     <hal format="hidl">
          <name>vendor.qti.hardware.systemhelper</name>

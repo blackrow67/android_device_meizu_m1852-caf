@@ -23,14 +23,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 $(call inherit-product, device/meizu/m1852/device.mk)
 
 # Inherit some common xperience stuff.
-$(call inherit-product, vendor/xperience/config/common_full_phone.mk)
+$(call inherit-product, vendor/conquer/config/common.mk)
 
 # Qcom stuff
 #include device/qcom/common/common.mk
 
 #Credits to XiNGRZ
 
-PRODUCT_NAME := xperience_m1852
+PRODUCT_NAME := conquer_m1852
 PRODUCT_BRAND := Meizu
 PRODUCT_DEVICE := m1852
 PRODUCT_MANUFACTURER := Meizu
