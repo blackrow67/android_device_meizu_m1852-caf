@@ -587,15 +587,4 @@
     <dimen name="status_bar_height_portrait">29.089996dip</dimen>
     <dimen name="status_bar_height_landscape">29.089996dip</dimen>
 
-    <!-- Smart charging -->
-    <bool name="config_smartChargingAvailable">true</bool>
-    <integer name="config_smartChargingBatteryLevel">90</integer>
-    <integer name="config_smartChargingBatteryResumeLevel">15</integer>
-    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
-    <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
-    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
-
-    <!-- Whether device has physical tri state switch -->
-    <bool name="config_hasAlertSlider">true</bool>
-
 </resources>

@@ -88,7 +88,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    $(TOPDIR)frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    $(TOPDIR)frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
@@ -96,28 +96,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0-impl \
-    audio.bluetooth.default \
-    audio.hearing_aid.default \
-    audio.a2dp.default_qti \
-    audio.hearing_aid.default_qti \
     libbthost_if
-
-# Bluetooth QTI
-PRODUCT_PACKAGES += \
-    libbt-hidlclient \
-    javax.btobex \
-    libattrib_static \
-    libbt-vendor \
-    libbt-logClient \
-    bt_logger \
-    libbluetooth_qti \
-    libbt-hidlclient \
-    libbtconfigstore \
-    com.qualcomm.qti.bluetooth_audio@1.0 \
-    vendor.qti.hardware.bluetooth_audio@2.0 \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0 \
-    vendor.qti.hardware.bluetooth_dun@1.0
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -263,7 +242,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 TARGET_COMMON_QTI_COMPONENTS := \
-    bt \
     perf
 
 # Radio - Networking stuff

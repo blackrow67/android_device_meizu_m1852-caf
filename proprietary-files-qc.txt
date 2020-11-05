@@ -1,40 +1,32 @@
-# Bluetooth - from Nokia/Phoenix_00WW/PNX_sprout:10/QKQ1.190828.002/00WW_4_30B:user/release-keys
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|57a0a575a2b1b96176fda1bcb84ea8371c4070d1
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
-vendor/lib64/hw/audio.bluetooth_qti.default.so|227b61f8b6851839d1a826b734c759361bab4e23
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|332bbe7b0e76358500605f7651b0dcfa0cd7f27b
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|71ad8980142e7d8d754607accc0cffd8f5e68dbd
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|96b44484392abf88f8473100279e9f68b05f1f50
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|392606728312e25f9a08f929d4528a3365e326d2
-vendor/lib64/libbtnv.so|3abd76a1109008dab8f697c8020badf1464ceb9a
-vendor/lib64/libbt-hidlclient.so|4a4038013bf438627154899d3823c9346c3d84ec
-vendor/lib64/libbluetooth_audio_session_qti.so|03bba95bf82d7024e509b57fe24e9a5357d84317
-vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so|4dfa7c2d66966a4b05108e18ed09b05d7677d3f0
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|9346946b110086a6b473c8226e072e9a0cdbb87e
-vendor/lib/hw/audio.bluetooth_qti.default.so|4c5eea411a5611600bbc4d8e1818b276001a181b
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|c8f0515e3d9c2dfc99e2562f3b43100690ee2054
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|6f9f0f1a9bbd14682caf825844cf652adb7b8f4b
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|d04ce5677ea683330ea26dfebe40759e7e533d6d
-vendor/lib/libbluetooth_audio_session_qti.so|d75a8d416d85cb8dd9ae070ffee644a9753dc8ce
-vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so|2821469b7e7f6cee1d3b81a91e1f9a6b9d34e5c5
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|37bc226f0aa9793a6beca1cabdde40030a7637f9
-product/lib/vendor.qti.hardware.bluetooth_audio@2.0.so|3ade126c3cf1590f6b66fc38c19d3ed0c7618efb
-product/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|562eebffae19b6ac3947f35de3bc0ee2e81b5af7
-product/lib/vendor.qti.hardware.btconfigstore@1.0.so|230346aba118dbb585128047c5c7e8e0968706a5
-product/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so|995a8127aea3b2de9efe68a5e5a6a61c80f438e7
-product/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|7cdd376b08b8571e51674e0e61607c6a52a5a24a
-product/lib64/vendor.qti.hardware.btconfigstore@1.0.so|42aa6258f3bf4e8ef72b7664f2277db49837e4da
+# Bluetooth
+vendor/bin/btnvtool
+vendor/bin/hci_qcomm_init
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/bin/wcnss_filter
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib/libbt-hidlclient.so
+vendor/lib/libbtnv.so
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/libbt-hidlclient.so
+vendor/lib64/libbtnv.so
 
-# ANT+ - from Nokia/Phoenix_00WW/PNX_sprout:10/QKQ1.190725.002/00WW_4_15B:user/release-keys
-product/lib/com.qualcomm.qti.ant@1.0.so|d62a952e299eff4b77a58508338d5ffb5665f056
-product/lib64/com.qualcomm.qti.ant@1.0.so|964da29cf0f2bfb78cc2a5ce34426954c3bf249c
-vendor/lib/com.qualcomm.qti.ant@1.0.so|631c8ec2aff8895f16c5698ae52fd2103795dfda
-vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so|e8a371a61ab7b41bb7f96e35de20f79c5122b758
-vendor/lib64/com.qualcomm.qti.ant@1.0.so|89ddc7c4fca432fa03fc8a222da079853d2ea3b2
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|4c8d6971513503e0ca97b440c04f93b23680546c
+# Bluetooth (ANT+)
+lib/com.qualcomm.qti.ant@1.0.so
+lib64/com.qualcomm.qti.ant@1.0.so
+vendor/lib/com.qualcomm.qti.ant@1.0.so
+vendor/lib64/com.qualcomm.qti.ant@1.0.so
 
 # Bluetooth (Audio)
+vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
+vendor/lib/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so
+vendor/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
+vendor/lib64/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
+
+# Bluetooth (aptX) - from crosshatch - QP1A.190711.020
+product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
 # CNE
 -lib/vendor.qti.hardware.data.latency@1.0.so
