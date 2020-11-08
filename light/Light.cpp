@@ -21,6 +21,11 @@
 namespace {
 using android::hardware::light::V2_0::LightState;
 
+static constexpr float BRIGHTNESS_MIN = 20;
+static constexpr float BRIGHTNESS_MAX = 750;
+static constexpr float BRIGHTNESS_RANGE_OLD = 255 - 10;
+static constexpr float BRIGHTNESS_RANGE_NEW = BRIGHTNESS_MAX - BRIGHTNESS_MIN;
+
 static uint32_t rgbToBrightness(const LightState& state) {
     uint32_t color = state.color & 0x00ffffff;
     return ((77 * ((color >> 16) & 0xff)) + (150 * ((color >> 8) & 0xff)) +
@@ -98,7 +103,19 @@ void Light::setAttentionLight(const LightState& state) {
 
 void Light::setPanelBacklight(const LightState& state) {
     std::lock_guard<std::mutex> lock(mLock);
+
     uint32_t brightness = rgbToBrightness(state);
+
+    int old_brightness = brightness;
+
+    brightness = BRIGHTNESS_MIN + ((float) brightness - 10) /
+            BRIGHTNESS_RANGE_OLD * BRIGHTNESS_RANGE_NEW;
+    if (brightness < BRIGHTNESS_MIN) {
+        brightness = BRIGHTNESS_MIN;
+    }
+
+    LOG(VERBOSE) << "scaling brightness " << old_brightness << " => " << brightness;
+
     set(PANEL_BRIGHTNESS_PATH, brightness);
 }
 

@@ -177,3 +177,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.thermalconfig.powersave=/vendor/etc/thermal.low.conf \
     persist.thermalengine.platform=qualcomm \
     persist.thermalmanager.enable=true \
+
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sdm.support_writeback=0
