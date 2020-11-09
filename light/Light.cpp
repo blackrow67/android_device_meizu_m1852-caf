@@ -18,13 +18,13 @@
 #define LED_OFF 0
 #define LED_BLINK 10
 
-namespace {
-using android::hardware::light::V2_0::LightState;
-
-static constexpr float BRIGHTNESS_MIN = 20;
-static constexpr float BRIGHTNESS_MAX = 750;
+static constexpr float BRIGHTNESS_MIN = 30;
+static constexpr float BRIGHTNESS_MAX = 1023;
 static constexpr float BRIGHTNESS_RANGE_OLD = 255 - 10;
 static constexpr float BRIGHTNESS_RANGE_NEW = BRIGHTNESS_MAX - BRIGHTNESS_MIN;
+
+namespace {
+using android::hardware::light::V2_0::LightState;
 
 static uint32_t rgbToBrightness(const LightState& state) {
     uint32_t color = state.color & 0x00ffffff;
@@ -110,9 +110,6 @@ void Light::setPanelBacklight(const LightState& state) {
 
     brightness = BRIGHTNESS_MIN + ((float) brightness - 10) /
             BRIGHTNESS_RANGE_OLD * BRIGHTNESS_RANGE_NEW;
-    if (brightness < BRIGHTNESS_MIN) {
-        brightness = BRIGHTNESS_MIN;
-    }
 
     LOG(VERBOSE) << "scaling brightness " << old_brightness << " => " << brightness;
 
