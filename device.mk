@@ -11,7 +11,8 @@ $(call inherit-product, vendor/meizu/m1852/m1852-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-device \
     $(LOCAL_PATH)/overlay-sdm710 \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lineage \
+    $(LOCAL_PATH)/overlay-pa
 
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
@@ -236,6 +237,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
     android.hardware.power@1.2 \
     android.hardware.power@1.2-service-qti
+
+# ParanoidDoze
+PRODUCT_PACKAGES += \
+    ParanoidDoze
 
 # QCOM
 PRODUCT_COPY_FILES += \

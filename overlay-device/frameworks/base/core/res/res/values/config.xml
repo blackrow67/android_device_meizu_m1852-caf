@@ -320,4 +320,8 @@
     <dimen name="status_bar_height_landscape">24dp</dimen>-->
     <dimen name="status_bar_height_portrait">29.089996dip</dimen>
     <dimen name="status_bar_height_landscape">29.089996dip</dimen>
+
+    <!-- Whether to show battery percentage inside icon -->
+    <bool name="config_battery_percentage_show_inside_icon">true</bool>
+
 </resources>

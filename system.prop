@@ -231,3 +231,8 @@ persist.vendor.radio.force_on_dc=true
 # 1 is camera1
 # 2 or anything else is camera2
 persist.radio.VT_CAM_INTERFACE=1
+
+# ParanoidDoze
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sensor.proximity=true \
+    ro.sensor.pickup=meizu.sensor.pickup
